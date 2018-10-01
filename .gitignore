@@ -1,0 +1,6 @@
+# fish
+fishd.*
+fish_history
+
+# other
+private/
