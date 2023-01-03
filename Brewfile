@@ -6,7 +6,7 @@ brew 'anyenv'
 brew 'stow'
 
 # Cask
-cask 'chrome'
+cask 'google-chrome'
 cask '1password'
 
 cask 'blockblock'
@@ -14,7 +14,7 @@ cask 'knockknock'
 cask 'oversight'
 cask 'little-snitch'
 
-cask 'code'
+cask 'visual-studio-code'
 cask 'dbeaver-community'
 cask 'docker'
 cask 'github'
