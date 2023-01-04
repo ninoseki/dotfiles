@@ -1,9 +1,18 @@
 tap 'homebrew/cask'
 
 # Brew
-brew 'fish'
 brew 'anyenv'
+brew 'fish'
 brew 'stow'
+
+brew 'bison'
+brew 'gperf'
+brew 'libffi'
+brew 'libyaml'
+brew 'readline'
+brew 'xz'
+brew 'zlib'
+brew 'libpq'
 
 # Cask
 cask 'google-chrome'
