@@ -1,0 +1,40 @@
+version: "3"
+tasks:
+  default:
+    - task: brew
+    - task: zsh
+    - task: asdf
+    - task: ruby
+    - task: nodejs
+    - task: textlint
+    - task: textlint
+  brew:
+    cmds:
+      - brew bundle
+    interactive: true
+  zsh:
+    cmds:
+      # install oh-my-zsh
+      - cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        ignore_error: true
+      - cp -f .zshrc ~/.zshrc
+    interactive: true
+  asdf:
+    cmds:
+      - asdf plugin add python && asdf install python latest && asdf global python latest
+      - asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git && asdf install nodejs latest && asdf global nodejs latest
+      - asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git && asdf install ruby latest && asdf global ruby latest
+      - asdf plugin-add java https://github.com/halcyon/asdf-java
+      - asdf plugin add kotlin
+  ruby:
+    cmds:
+      - cp -i .gemrc ~/.gemrc
+    interactive: true
+  nodejs:
+    cmds:
+      - npm install -g np
+  textlint:
+    cmds:
+      - npm install -g textlint textlint-rule-ginger textlint-rule-spellchecker
+      - cp -i .textlintrc.json ~/.textlintrc.json
+    interactive: true
