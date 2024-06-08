@@ -7,7 +7,6 @@ tasks:
     - task: ruby
     - task: nodejs
     - task: textlint
-    - task: textlint
   brew:
     cmds:
       - brew bundle
