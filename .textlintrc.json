@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "ginger": {
+      "skipPatterns": [
+        "/JavaScript/i"
+      ]
+    },
+    "spellchecker": {
+      "skipNodeTypes": [
+        "Comment"
+      ]
+    }
+  }
+}
