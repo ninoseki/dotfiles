@@ -1,18 +1,18 @@
 # brew install
 brew 'asdf'
-brew 'httpie'
-brew 'jq'
-brew 'shadowenv'
-brew 'trash'
-
 brew 'bison'
 brew 'gperf'
+brew 'httpie'
+brew 'jq'
 brew 'libffi'
+brew 'libpq'
 brew 'libyaml'
 brew 'readline'
+brew 'shadowenv'
+brew 'stow'
+brew 'trash'
 brew 'xz'
 brew 'zlib'
-brew 'libpq'
 
 # zsh
 brew 'zsh-autosuggestions'
@@ -20,11 +20,11 @@ brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 
 # k8s
+brew 'kube-ps1'
 brew 'kubectl'
 brew 'kubectx'
-brew 'kube-ps1'
 
-# brew install --cask
+# cask
 cask 'google-chrome'
 cask '1password'
 

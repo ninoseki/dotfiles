@@ -16,7 +16,7 @@ tasks:
       # install oh-my-zsh
       - cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         ignore_error: true
-      - cp -f .zshrc ~/.zshrc
+      - stow -vv -t ~/ zsh
     interactive: true
   asdf:
     cmds:
@@ -27,13 +27,11 @@ tasks:
       - asdf plugin add kotlin
   ruby:
     cmds:
-      - cp -i .gemrc ~/.gemrc
-    interactive: true
+      - stow -vv -t ~/ ruby
   nodejs:
     cmds:
       - npm install -g np
   textlint:
     cmds:
       - npm install -g textlint textlint-rule-ginger textlint-rule-spellchecker
-      - cp -i .textlintrc.json ~/.textlintrc.json
-    interactive: true
+      - stow -vv -t ~/ textlint
