@@ -3,9 +3,9 @@ tasks:
   default:
     - task: brew
     - task: zsh
-    - task: asdf
+    - task: tmux
+    - task: mise
     - task: ruby
-    - task: nodejs
     - task: textlint
   brew:
     cmds:
@@ -18,19 +18,18 @@ tasks:
         ignore_error: true
       - stow -vv -t ~/ zsh
     interactive: true
-  asdf:
+  tmux:
     cmds:
-      - asdf plugin add python && asdf install python latest && asdf global python latest
-      - asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git && asdf install nodejs latest && asdf global nodejs latest
-      - asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git && asdf install ruby latest && asdf global ruby latest
-      - asdf plugin-add java https://github.com/halcyon/asdf-java
-      - asdf plugin add kotlin
+      - stow -vv -t ~/ tmux
+  mise:
+    cmds:
+      - mise use -g node@22
+      - mise use -g python@3
+      - mise use -g ruby@3
+      - mise use -g go@1
   ruby:
     cmds:
       - stow -vv -t ~/ ruby
-  nodejs:
-    cmds:
-      - npm install -g np
   textlint:
     cmds:
       - npm install -g textlint textlint-rule-ginger textlint-rule-spellchecker
